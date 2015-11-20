@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+<script>
+function ncInit($scope){
+$scope.initNairaValue = 1;
+$scope.initDollarValue = 191.10;
+$scope.userNairaValue = 1;
+$scope.userDollarValue = 1;
+}
+</script>
+</head>
+<body>
+<div data-ng-app="" data-ng-controller ="ncInit">
+<h1>{{initNairaValue}} Naira equals {{initDollarValue}} US Dollars </h2>
+
+
+<fieldset>
+<legend>=N= to $</legend>
+
+<p>=N= <input type="number" data-ng-model="userNairaValue"></input> equals $ {{userNairaValue/initDollarValue}}</p>
+
+
+
+</fieldset>S
+
+<fieldset>
+<legend>$ TO =N=</legend>
+
+<p>$ <input type="number" data-ng-model="userDollarValue"></input> equals =N= {{userDollarValue * initDollarValue}}</p>
+
+
+
+</fieldset>
+</div>
+</body>
+
+</html>
